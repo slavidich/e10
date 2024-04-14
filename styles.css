@@ -127,41 +127,51 @@ p, h1,h2,h3,h4,h5,h6{
     max-width: 1200px;
     margin: 0 auto;
     box-sizing: border-box;
+    margin-left:15px;
 }
 .jobitem{
     margin-top:15px;
-    padding: 10px 20px 10px 20px;
+    
     position: relative;
-    border: solid 2px #909090;
+    
     border-radius:5px;
     width: 50%;
     box-sizing: border-box;
 }
-.leftitem{
-    left: 2%;
-    
+.job{
+    border: solid 2px #909090;
+    border-radius:5px;
+    padding: 10px 10px;
 }
-#.leftitem::after{
+
+.leftitem::before{
     content:'';
     width:5px;
     position: absolute;
     top:22px;
-    left:100%;
+    right:-5px;
     border: 15px solid transparent; 
     border-left: 15px solid #909090; 
 }
-#.leftitem::before{
+.leftitem::after{
     content:'';
     width:5px;
     position: absolute;
-    top:24px;
-    right:-17px;
-
-    border: 12px solid #909090; 
+    width:10px;
+    height:10px;
+    top:30px;
+    right:-9px;
+    border: 2px solid rgb(141, 141, 141); 
+    background-color: rgb(141, 141, 141);
     border-radius: 50%;
+    z-index: 1;
 }
 .rightitem{
     left: 50%;
+    padding: 0px 0px 0px 30px;
+}
+.leftitem{
+    padding: 0px 30px 0px 0px;
 }
 .jobinfo{
     display:flex;
@@ -172,14 +182,14 @@ p, h1,h2,h3,h4,h5,h6{
 .jobinfo > h4{
     margin: 5px 5px 5px 5px;
 }
-#.timeline::after{
-    background-color: #909090;
+.timeline::after{
+    background-color: #9090908e;
     content:'';
     width:5px;
     position: absolute;
     top:0;
     bottom:0;
-    left:51%
+    left:50%
 }
 
 @media screen and (max-width: 760px){
