@@ -130,20 +130,25 @@ p, h1,h2,h3,h4,h5,h6{
     margin-left:15px;
 }
 .jobitem{
-    margin-top:15px;
+    
     
     position: relative;
-    
+    margin-top:-5%;
     border-radius:5px;
     width: 50%;
     box-sizing: border-box;
+}
+.jobitem:first-child{
+    margin-top:15px;
 }
 .job{
     border: solid 2px #909090;
     border-radius:5px;
     padding: 10px 10px;
 }
-
+.leftitem{
+    padding: 0px 30px 0px 0px;
+}
 .leftitem::before{
     content:'';
     width:5px;
@@ -160,9 +165,9 @@ p, h1,h2,h3,h4,h5,h6{
     width:10px;
     height:10px;
     top:30px;
-    right:-9px;
-    border: 2px solid rgb(141, 141, 141); 
-    background-color: rgb(141, 141, 141);
+    right:-8px;
+    border: 1px solid #c2c2c2; 
+    background-color: #c2c2c2;
     border-radius: 50%;
     z-index: 1;
 }
@@ -170,8 +175,27 @@ p, h1,h2,h3,h4,h5,h6{
     left: 50%;
     padding: 0px 0px 0px 30px;
 }
-.leftitem{
-    padding: 0px 30px 0px 0px;
+.rightitem::before{
+    content:'';
+    width:5px;
+    position: absolute;
+    top:22px;
+    left:-5px;
+    border: 15px solid transparent; 
+    border-right: 15px solid #909090; 
+}
+.rightitem::after{
+    content:'';
+    width:5px;
+    position: absolute;
+    width:10px;
+    height:10px;
+    top:30px;
+    left:-4px;
+    border: 1px solid #c2c2c2; 
+    background-color: #c2c2c2;
+    border-radius: 50%;
+    z-index: 1;
 }
 .jobinfo{
     display:flex;
@@ -183,15 +207,54 @@ p, h1,h2,h3,h4,h5,h6{
     margin: 5px 5px 5px 5px;
 }
 .timeline::after{
-    background-color: #9090908e;
+    background-color: #c2c2c2;
     content:'';
-    width:5px;
+    width:4px;
     position: absolute;
     top:0;
-    bottom:0;
-    left:50%
+    bottom:10px;
+    left:50%;
+    border-radius:5px;
+}
+.skilldiv{
+    margin:10px 5px 15px 0px;
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
+.skillbar{
+    left:10%;
+    width:85%;
+    margin-left:5px;
+    background-color: #c2c2c2;
+}
+.skillbarpercent{
+    height:100%;
+    display:flex;
+    justify-content: end;
+    align-items: center;
+}
+.skillbarpercentpython{
+    width:50%;
+    background-color: #85a587;
+}
+.skillbarpercentjs{
+    width:30%;
+    background-color: #858ea5;
+}
+.skillbarpercenthtml{
+    width:60%;
+    background-color: #a0a585;
+}
+.skillbarpercentcss{
+    width:40%;
+    background-color: #a58597;
+}
+.skillbar p{
+    margin:0px 5% 0px 0px;
+}
 @media screen and (max-width: 760px){
     .grid-wrapper { 
         display:grid;
@@ -216,10 +279,42 @@ p, h1,h2,h3,h4,h5,h6{
         margin-top:15px;
     }
     .jobitem{
-        width:85%;
+        width:100%;
+        
+    }
+    .jobitem:first-of-type{
+        padding-top:0px;
+    }
+    .jobitem:last-of-type{
+        padding-bottom:0px;
     }
     .rightitem, .leftitem{
-        left:12%
+        left:0%;
+        padding: 25px 0px 25px 25px;
     }
-
-}
+    .timeline{
+        
+    }
+    .timeline::after{
+        left:-5px;
+    }
+    .rightitem::before, .leftitem::before{
+        top:35px;
+        left:-8px;
+        border: 15px solid transparent; 
+        border-right: 15px solid #909090; 
+    }
+    .rightitem::after, .leftitem::after{
+        top:45px;
+        left:-9px;
+    }   
+    .leftitem:first-of-type::after{
+        top:25px;
+    }
+    .leftitem:first-of-type::before{
+        top:15px;
+    }
+    .skilltext{
+        min-width: 80px;
+    }
+}   
